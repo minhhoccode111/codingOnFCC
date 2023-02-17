@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="text-align: center">
+    <h1>Basic Algorithm Scripting_1</h1>
+    <h1>Convert Celsius to fahrenheit</h1>
+    <h2>Your input is: <span class="input"></span></h2>
+    <h2>And output is: <span class="result"></span></h2>
+    <button type="button" title="Click to input Celsius" class="click">
+      Input
+    </button>
+    <script>
+      function convertCtoF(celsius) {
+        let fahrenheit = (celsius * 9) / 5 + 32;
+        isNaN(fahrenheit)
+          ? (document.querySelector(".result").innerHTML = "Invalid Input")
+          : ((document.querySelector(".input").innerHTML = celsius),
+            (document.querySelector(".result").innerHTML = fahrenheit));
+        return fahrenheit;
+      }
+      // let celsius = prompt("Enter a temperature in Celsius: ");
+      const button = document.querySelector(".click");
+      button.addEventListener("click", () =>
+        convertCtoF(prompt("Enter a temperature in Celsius: "))
+      );
+    </script>
+  </body>
+</html>
